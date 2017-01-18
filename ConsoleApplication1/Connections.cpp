@@ -1,9 +1,11 @@
 #include "Connections.h"
+#include <stdio.h>
+#include <tchar.h>
 
 
-
-Connections::Connections()
+Connections::Connections(double randomWeight)
 {
+	this->weight = randomWeight;
 }
 
 double Connections::get_Weight() const

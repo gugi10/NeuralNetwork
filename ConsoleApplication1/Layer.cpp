@@ -1,4 +1,6 @@
 #include "Layer.h"
+#include <stdio.h>
+#include <tchar.h>
 
 vector<Neuron> &Layer::get_NeuronsLayer() 
 {

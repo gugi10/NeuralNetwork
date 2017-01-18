@@ -1,8 +1,8 @@
-#pragma once
 #include <iostream>
 #include <vector>
 #include "Neuron.h"
 using namespace std;
+
 
 class Layer {
 private:

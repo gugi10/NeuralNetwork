@@ -1,5 +1,6 @@
 #include "Neuron.h"
-
+#include <stdio.h>
+#include <tchar.h>
 
 
 Neuron::Neuron()
@@ -7,6 +8,7 @@ Neuron::Neuron()
 	input = 0;
 	output = 0;
 	squaredError = 0;
+
 }
 double Neuron::get_Input() const
 {
@@ -31,6 +33,19 @@ double Neuron::get_SquaredError() const
 void Neuron::set_SquaredError(double squaredError)
 {
 	Neuron::squaredError = squaredError;
+}
+void Neuron::add_SquaredError(double error)
+{
+	this->Neuron::squaredError = this->Neuron::squaredError + error;
+}
+
+void Neuron::add_ToInput(double newValue)
+{
+	this->input = this->input + newValue;
+}
+double Neuron::CalculateDerivative()
+{
+	return input*(1 - input);
 }
 
 Neuron::~Neuron()

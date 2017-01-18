@@ -27,6 +27,7 @@
   <ItemGroup>
     <ClCompile Include="Connections.cpp" />
     <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Net.cpp" />
     <ClCompile Include="Neuron.cpp" />
   </ItemGroup>

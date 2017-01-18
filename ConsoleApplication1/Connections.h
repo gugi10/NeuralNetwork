@@ -1,11 +1,15 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
+
 class Connections
 {
 	private:
 		double weight;
 		double deltaWeight;
 	public:
-		Connections();
+		Connections(double randomWeight);
 
 		double get_Weight() const;
 
