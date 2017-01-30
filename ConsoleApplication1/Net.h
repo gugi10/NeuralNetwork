@@ -24,12 +24,16 @@ public:
 	void set_Layers( vector<Layer> tempVectorLayer);
 	void create_Connections();
 	void set_Connections( vector<vector<Connections>> &t_connectionVector);
+	void update_weights();
+	void set_inputs(vector<double> input);
+	void set_output_for_bias(double output);
 
 	double ActivationFunction(double NeuronOutput);
 	
 	
 
 	void feed_Forward();
+	void change_outputs_in_input_layer(vector<double> new_outputs);
 	void BackPropForLastLayer();
 	void BackpropForHiddenLayers();
 	vector<vector<Connections>> &get_Connections();

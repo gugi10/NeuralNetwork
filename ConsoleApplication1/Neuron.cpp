@@ -26,6 +26,7 @@ void Neuron::set_Output(double output)
 {
 	Neuron::output = output;
 }
+
 double Neuron::get_SquaredError() const
 {
 	return squaredError;
@@ -45,7 +46,7 @@ void Neuron::add_ToInput(double newValue)
 }
 double Neuron::CalculateDerivative()
 {
-	return input*(1 - input);
+	return output*(1 - output);
 }
 
 Neuron::~Neuron()
