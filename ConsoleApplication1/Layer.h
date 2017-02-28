@@ -6,13 +6,13 @@ using namespace std;
 
 class Layer {
 private:
-	vector<Neuron> layerOfNeurons;
+	vector<Neuron> layer_of_neurons;
 public:
 	Layer(int);
 
-	vector<Neuron> &get_NeuronsLayer();
+	vector<Neuron> &get_neurons_layer();
 
-	void set_NeuronsLayer(const vector<Neuron> &neuronsLayer);
+	void set_neurons_layer(const vector<Neuron> &neuronsLayer);
 
 	virtual ~Layer();
 };

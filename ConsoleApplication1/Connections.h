@@ -7,17 +7,14 @@ class Connections
 {
 	private:
 		double weight;
-		double deltaWeight;
+		
 	public:
-		Connections(double randomWeight);
+		Connections(double random_weight);
 
-		double get_Weight() const;
+		double get_weight() const;
 
-		void set_Weight(double weight);
+		void set_weight(double weight);
 
-		double get_DeltaWeight() const;
-
-		void set_DeltaWeight(double deltaWeight);
 
 		virtual ~Connections();
 	};

@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include <tchar.h>
 
-vector<Neuron> &Layer::get_NeuronsLayer() 
+vector<Neuron> &Layer::get_neurons_layer() 
 {
-	return layerOfNeurons;
+	return layer_of_neurons;
 }
 
-void Layer::set_NeuronsLayer(const vector<Neuron> &layerOfNeurons) 
+void Layer::set_neurons_layer(const vector<Neuron> &layerOfNeurons) 
 {
-	Layer::layerOfNeurons = layerOfNeurons;
+	Layer::layer_of_neurons = layerOfNeurons;
 }
 
 Layer::Layer(int NumberOfNeurons) 
@@ -19,7 +19,7 @@ Layer::Layer(int NumberOfNeurons)
 		Neuron newNeuron;
 		tempLayerOfNeurons.push_back(newNeuron);
 	}
-	set_NeuronsLayer(tempLayerOfNeurons);
+	set_neurons_layer(tempLayerOfNeurons);
 }
 
 Layer::~Layer()

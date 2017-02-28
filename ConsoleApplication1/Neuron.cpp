@@ -7,46 +7,48 @@ Neuron::Neuron()
 {
 	input = 0;
 	output = 0;
-	squaredError = 0;
+	propageted_error = 0;
 
 }
-double Neuron::get_Input() const
+double Neuron::get_input() const
 {
 	return input;
 }
-void Neuron::set_Input(double input)
+void Neuron::set_input(double input)
 {
 	Neuron::input = input;
 }
-double Neuron::get_Output() const
+double Neuron::get_output() const
 {
+	
 	return output;
 }
-void Neuron::set_Output(double output)
+void Neuron::set_output(double output)
 {
 	Neuron::output = output;
 }
 
-double Neuron::get_SquaredError() const
+double Neuron::get_propagated_error() const
 {
-	return squaredError;
+	return propageted_error;
 }
-void Neuron::set_SquaredError(double squaredError)
+void Neuron::set_propagated_error(double squaredError)
 {
-	Neuron::squaredError = squaredError;
+	Neuron::propageted_error = squaredError;
 }
-void Neuron::add_SquaredError(double error)
+void Neuron::add_propagated_error(double error)
 {
-	this->Neuron::squaredError = this->Neuron::squaredError + error;
+	this->Neuron::propageted_error = this->Neuron::propageted_error + error;
 }
 
-void Neuron::add_ToInput(double newValue)
+void Neuron::add_input(double newValue)
 {
 	this->input = this->input + newValue;
 }
-double Neuron::CalculateDerivative()
+#define fp(x) exp(x)/pow((1+exp(x)),2)
+double Neuron::calculate_derivative()
 {
-	return output*(1 - output);
+	return fp(output);
 }
 
 Neuron::~Neuron()
